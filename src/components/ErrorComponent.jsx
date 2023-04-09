@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Alert, AlertIcon } from '@chakra-ui/react';
 
 const ErrorComponent = ({message}) => {
   return (
-    <div>{message}</div>
+    <Alert status='error' position={"fixed"} top={"50%"} left={"50%"} transform={"translate(-50%,-50%)"} w={"container.lg"}>
+      <AlertIcon />
+      {message}
+    </Alert>
   )
 }
 
